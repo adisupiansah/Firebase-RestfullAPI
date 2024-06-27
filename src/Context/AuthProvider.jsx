@@ -81,7 +81,6 @@ export const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, Facebookprovider)
             .then((result) => {
                 const user = result.user
-                console.log('login succces menggunakan facebook', user);
                 set(ref(database, 'users/' + user.uid), {
                     username: user.displayName,
                     email: user.email

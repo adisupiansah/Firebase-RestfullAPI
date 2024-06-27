@@ -1,4 +1,3 @@
-import React from 'react'
 import { Card, Container, Col, Row, Button} from 'react-bootstrap'
 import { FaTrash } from "react-icons/fa";
 import axios from 'axios';

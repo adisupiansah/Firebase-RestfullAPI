@@ -19,7 +19,7 @@ const Login = () => {
         e.preventDefault()
         try {
             await login(email, password)
-            navigate('/app')
+            navigate('/')
         } catch (error) {
             setError('Username / password anda salah, login kembali')
         }
@@ -28,7 +28,7 @@ const Login = () => {
     const handleGoogleLogin= async () => {
         try {
             await loginWithGoogle()
-            navigate('/app')
+            navigate('/')
         } catch {
             setError('login dengan google gagal, silahkan login kembli')
         }
@@ -37,7 +37,7 @@ const Login = () => {
     const handleFacebookLogin = async () => {
         try {
             await loginWithFacebook()
-            navigate('/app')
+            navigate('/')
         } catch (error) {
             console.error(error)
             setError('login dengan facebook gagal, silahkan login kembli')

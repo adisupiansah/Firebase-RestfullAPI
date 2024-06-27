@@ -1,4 +1,3 @@
-import React from 'react'
 import Form from './components/Form'
 import FetchData from './components/FetchData'
 import { useState, useEffect } from 'react'
@@ -37,7 +36,7 @@ const App = () => {
     const { user } = useAuth()
     const location = useLocation()
     if (!user) {
-      return <Navigate to='/' state={{from: location}} replace />
+      return <Navigate to='/login' state={{from: location}} replace />
     }
     return children
   }
@@ -48,9 +47,9 @@ const App = () => {
       <Router>
         <AuthProvider>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/app" element={
+            <Route path="/" element={
               <RequireAuth>
                 <>
                   <NavigasiBar/>
